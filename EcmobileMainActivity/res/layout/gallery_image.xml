@@ -3,13 +3,14 @@
     android:id="@+id/backgroundLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#fff"
     android:orientation="vertical" >
 
     <HorizontalScrollView
         android:id="@+id/background_srcollview"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:visibility="gone" >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -78,8 +79,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/tuitional_bg"
-                    android:visibility="invisible" />
+                    android:src="@drawable/one"
+                    android:visibility="visible" />
             </FrameLayout>
 
             <FrameLayout
@@ -92,15 +93,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/tuitional_bg"
-                    android:visibility="invisible" />
+                    android:src="@drawable/two"
+                    android:visibility="visible" />
 
                 <ImageView
                     android:layout_width="165dp"
                     android:layout_height="121dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="83dp"
-                    android:src="@drawable/tuitional_img_2_1" />
+                    android:src="@drawable/tuitional_img_2_1"
+                    android:visibility="gone" />
             </FrameLayout>
 
             <FrameLayout
@@ -113,8 +115,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/tuitional_bg"
-                    android:visibility="invisible" />
+                    android:src="@drawable/three"
+                    android:visibility="visible" />
 
                 <ImageView
                     android:layout_width="155dp"
@@ -123,7 +125,7 @@
                     android:layout_marginRight="27dp"
                     android:layout_marginTop="264dp"
                     android:src="@drawable/tuitional_img_3_1"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
                 <ImageView
                     android:layout_width="45dp"
@@ -132,13 +134,14 @@
                     android:layout_marginRight="34dp"
                     android:layout_marginTop="325dp"
                     android:src="@drawable/tuitional_img_3_3"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
             </FrameLayout>
 
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:visibility="gone" >
 
                 <ImageView
                     android:id="@+id/layer_image_four"
@@ -160,7 +163,8 @@
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:visibility="gone" >
 
                 <ImageView
                     android:id="@+id/layer_image_five"

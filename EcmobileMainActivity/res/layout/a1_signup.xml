@@ -35,7 +35,9 @@
             android:layout_gravity="center"
             android:text="@string/login_account"
             android:textColor="#ffffff"
-            android:textSize="24dp" />
+            android:textSize="18dp" />
+
+        
     </FrameLayout>
 
     <ScrollView
@@ -68,7 +70,6 @@
                     android:paddingRight="10dp"
                     android:singleLine="true"
                     android:textColor="#000000"
-                    android:maxLength="20"
                     android:textSize="16dp" />
 
                 <View
@@ -109,7 +110,6 @@
                     android:password="true"
                     android:singleLine="true"
                     android:textColor="#000000"
-                    android:maxLength="20"
                     android:textSize="16dp" />
 
                 <View
@@ -130,7 +130,6 @@
                     android:password="true"
                     android:singleLine="true"
                     android:textColor="#000000"
-                    android:maxLength="20"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -145,20 +144,19 @@
                 android:padding="5dp"
                 android:visibility="gone" >
             </LinearLayout>
-            
-            <Button
+       <Button
             android:id="@+id/register_register"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/filter_blue_btn"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/gray_button"
             android:text="@string/register_regist"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
-            
+            android:textSize="14dp" />
         </LinearLayout>
+        
     </ScrollView>
 
 </LinearLayout>

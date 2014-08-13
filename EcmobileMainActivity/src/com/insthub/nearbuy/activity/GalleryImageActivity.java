@@ -13,35 +13,28 @@ package com.insthub.nearbuy.activity;
 //  Powered by BeeFramework
 //
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import com.external.HorizontalVariableListView.widget.HorizontalListView;
-import com.external.activeandroid.util.Log;
-import com.external.easing.Back;
+
 import com.external.easing.Cubic;
-import com.external.easing.Expo;
 import com.external.easing.Sine;
-import com.insthub.BeeFramework.Utils.Utils;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.nearbuy.R;
 import com.insthub.nearbuy.adapter.GalleryImageAdapter;
-import com.umeng.analytics.MobclickAgent;
 
 public class GalleryImageActivity extends BaseActivity implements OnGestureListener, OnTouchListener {
 	
@@ -129,7 +122,7 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {		
 		if (e1.getX() - e2.getX() > 120) {      
-			if(pager_num == 5) {
+			if(pager_num == 3) {
 				Intent intent = new Intent(GalleryImageActivity.this,EcmobileMainActivity.class);
 				startActivity(intent);
 				finish();
@@ -181,17 +174,17 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
         layoutParams.width = dm.widthPixels;
         back_image_three.setLayoutParams( layoutParams);
 
-        ImageView back_image_four = (ImageView)findViewById(R.id.back_image_four);
-        layoutParams = back_image_four.getLayoutParams();
-        layoutParams.height = dm.heightPixels;
-        layoutParams.width = dm.widthPixels;
-        back_image_four.setLayoutParams( layoutParams);
-
-        ImageView back_image_five = (ImageView)findViewById(R.id.back_image_five);
-        layoutParams = back_image_five.getLayoutParams();
-        layoutParams.height = dm.heightPixels;
-        layoutParams.width = dm.widthPixels;
-        back_image_five.setLayoutParams( layoutParams);
+//        ImageView back_image_four = (ImageView)findViewById(R.id.back_image_four);
+//        layoutParams = back_image_four.getLayoutParams();
+//        layoutParams.height = dm.heightPixels;
+//        layoutParams.width = dm.widthPixels;
+//        back_image_four.setLayoutParams( layoutParams);
+//
+//        ImageView back_image_five = (ImageView)findViewById(R.id.back_image_five);
+//        layoutParams = back_image_five.getLayoutParams();
+//        layoutParams.height = dm.heightPixels;
+//        layoutParams.width = dm.widthPixels;
+//        back_image_five.setLayoutParams( layoutParams);
 
 
         FrameLayout.LayoutParams frameLayoutParams;
@@ -213,16 +206,16 @@ public class GalleryImageActivity extends BaseActivity implements OnGestureListe
         frameLayoutParams.width = dm.widthPixels;
         layer_image_three.setLayoutParams( frameLayoutParams);
 
-        ImageView layer_image_four = (ImageView)findViewById(R.id.layer_image_four);
-        frameLayoutParams = (FrameLayout.LayoutParams)layer_image_four.getLayoutParams();
-        frameLayoutParams.height = dm.heightPixels;
-        frameLayoutParams.width = dm.widthPixels;
-        layer_image_four.setLayoutParams( frameLayoutParams);
-
-        ImageView layer_image_five = (ImageView)findViewById(R.id.layer_image_five);
-        frameLayoutParams = (FrameLayout.LayoutParams)layer_image_five.getLayoutParams();
-        frameLayoutParams.height = dm.heightPixels;
-        frameLayoutParams.width = dm.widthPixels;
-        layer_image_five.setLayoutParams( frameLayoutParams);
+//        ImageView layer_image_four = (ImageView)findViewById(R.id.layer_image_four);
+//        frameLayoutParams = (FrameLayout.LayoutParams)layer_image_four.getLayoutParams();
+//        frameLayoutParams.height = dm.heightPixels;
+//        frameLayoutParams.width = dm.widthPixels;
+//        layer_image_four.setLayoutParams( frameLayoutParams);
+//
+//        ImageView layer_image_five = (ImageView)findViewById(R.id.layer_image_five);
+//        frameLayoutParams = (FrameLayout.LayoutParams)layer_image_five.getLayoutParams();
+//        frameLayoutParams.height = dm.heightPixels;
+//        frameLayoutParams.width = dm.widthPixels;
+//        layer_image_five.setLayoutParams( frameLayoutParams);
     }
 }

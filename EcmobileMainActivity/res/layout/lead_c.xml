@@ -3,6 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+            <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+    
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +24,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="120dp"
         android:src="@drawable/tuitional_img_3_2"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -43,6 +52,8 @@
         android:textColor="#ffffff"
         android:textSize="16dp" />
 
+    </LinearLayout>
+    
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -67,19 +78,21 @@
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_margin="4dp"
-            android:src="@drawable/tuitional_carousel_active_btn" />
+            android:src="@drawable/tuitional_carousel_btn_last" />
 
         <ImageView
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_margin="4dp"
-            android:src="@drawable/tuitional_carousel_btn" />
+            android:src="@drawable/tuitional_carousel_btn"
+            android:visibility="gone" />
 
         <ImageView
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:layout_margin="4dp"
-            android:src="@drawable/tuitional_carousel_btn" />
+            android:src="@drawable/tuitional_carousel_btn"
+            android:visibility="gone" />
     </LinearLayout>
 
 </FrameLayout>
