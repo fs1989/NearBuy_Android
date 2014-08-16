@@ -9,7 +9,7 @@ package com.tencent.weibo.sdk.android.component;
 public final class R {
 	public static final class drawable {
 		public static final int dingwei_icon2x = 0x7f020037;
-		public static final int ic_launcher = 0x7f02004d;
+		public static final int ic_launcher = 0x7f02004e;
 	}
 	public static final class id {
 		public static final int add = 0x7f09018e;
