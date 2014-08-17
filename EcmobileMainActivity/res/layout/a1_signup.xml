@@ -54,7 +54,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/body_cont"
+                android:background="@drawable/white"
                 android:gravity="center_vertical"
                 android:orientation="vertical" >
 
@@ -151,7 +151,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/gray_button"
+            android:background="@drawable/button_green_selector"
             android:text="@string/register_regist"
             android:textColor="#ffffff"
             android:textSize="14dp" />

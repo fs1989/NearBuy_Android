@@ -151,7 +151,7 @@
 	            android:layout_height="40dp"
 	            android:layout_gravity="center"
 	            android:layout_margin="10dp"
-	            android:background="@drawable/gray_button"
+	            android:background="@drawable/button_green_selector"
 	            android:text="@string/login_login"
 	            android:textColor="#ffffff"
 	            android:textSize="14dp" />

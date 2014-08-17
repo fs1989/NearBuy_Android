@@ -10,7 +10,7 @@
         android:layout_height="150dp"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:background="@drawable/white" >
+        android:background="@drawable/shopping_cart_body_bg_05" >
 
         <LinearLayout
             android:layout_width="fill_parent"

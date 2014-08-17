@@ -11,7 +11,7 @@
         android:layout_marginLeft="3.6dp"
         android:layout_marginRight="3.6dp"
         android:layout_marginTop="-2dip"
-        android:background="@drawable/white"
+        android:background="@drawable/shopping_cart_body_bg_02"
         android:orientation="horizontal" >
 
         <LinearLayout

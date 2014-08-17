@@ -157,7 +157,7 @@ public class E4_HistoryAdapter extends BaseAdapter {
 		holder.total.setText(order.total_fee);
 		
 		if(flag == 1) {
-			holder.ok.setBackgroundResource(R.drawable.button_narrow_red);
+			holder.ok.setBackgroundResource(R.drawable.button_green_selector);
 			holder.ok.setText(resource.getString(R.string.pay));
 			holder.check.setText(resource.getString(R.string.balance_cancel));
 			holder.ok.setOnClickListener(new OnClickListener() {

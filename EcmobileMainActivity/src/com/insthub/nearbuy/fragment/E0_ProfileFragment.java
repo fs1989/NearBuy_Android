@@ -304,6 +304,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 	
 
 	//友盟获得用户
+	/*
 	public void setUserName() {
 		
 		try {
@@ -333,7 +334,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 		}
 		
 	}
-	
+	*/
 	
 	@Override
 	public void onClick(View v) {
@@ -342,7 +343,9 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 		switch(v.getId()) {
 		
 		case R.id.feedback:
-			uid = shared.getString("uid", "");
+			FeedbackAgent agent = new FeedbackAgent(mContext);
+			agent.startFeedbackActivity();
+			/*uid = shared.getString("uid", "");
 			if (uid.equals("")) {
 				isRefresh = true;
 				intent = new Intent(getActivity(), A0_SigninActivity.class);
@@ -354,6 +357,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 //				setUserName();
 				agent.startFeedbackActivity();
 			}
+			*/
 			break;
 		
 		case R.id.profile_head_setting:

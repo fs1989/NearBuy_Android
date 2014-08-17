@@ -40,6 +40,7 @@ import com.insthub.nearbuy.R;
 import com.insthub.nearbuy.protocol.FILTER;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 public class EcmobileMainActivity extends FragmentActivity
 {
@@ -64,6 +65,7 @@ public class EcmobileMainActivity extends FragmentActivity
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
 	    
+	    UmengUpdateAgent.silentUpdate(this);
 	    FeedbackAgent agent = new FeedbackAgent(this);
 	    agent.sync();
 	    

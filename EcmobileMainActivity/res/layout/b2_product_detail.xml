@@ -47,7 +47,8 @@
             android:gravity="center"
             android:text="@string/gooddetail_buy"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/add_to_cart"
@@ -55,7 +56,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="5dp"
             android:layout_weight="0.3"
-            android:background="@drawable/button_red"
+            android:background="@drawable/button_green_selector"
             android:gravity="center"
             android:text="@string/gooddetail_shoppingcart"
             android:textColor="#ffffff"

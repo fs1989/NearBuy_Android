@@ -2,13 +2,12 @@
 <resources>
     
 
-<string name="delivery_comment1">13点前下单，当日12:00-14:00配送</string>
-<string name="delivery_comment2">21点前下单，当日18:00-22:00配送</string>
-<string name="delivery_comment3">21点后下单，次日12:00-14:00配送</string>
-<string name="contact_us1">亲, 关于我们的产品和服务你萌有啥想说的, 欢迎随时给大叔留言! </string>
-<string name="contact_us2">(如紧急, 可致电)</string>
-<string name="contact_us3">电话: 18131211210 (8点~24点可拨打)</string>
-<string name="contact_us4">百度燕大贴吧: @风雪诗昂 可以私信我你想说的话</string>
+<string name="delivery_comment1">13点前下单，当日12:00&#8211;14:00配送</string>
+<string name="delivery_comment2">21点前下单，当日18:00&#8211;22:00配送</string>
+<string name="delivery_comment3">21点后下单，次日12:00&#8211;14:00配送</string>
+<string name="contact_us1">亲,关于我们的产品和服务你萌有啥想说的,欢迎随时给大叔留言!(如紧急,可致电)</string>
+<string name="contact_us2">电话:181 3121 1210 (8点~24点可拨打)</string>
+<string name="contact_us3">百度燕大贴吧: @风雪诗昂 可以私信我你想说的话</string>
 
 <string name="lifecycle_all">所有</string>
 <string name="lifecycle_visible">可见</string>
