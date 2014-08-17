@@ -18,14 +18,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.res.Resources;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -36,6 +35,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.activity.BaseActivity;
@@ -44,19 +44,10 @@ import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.nearbuy.R;
 import com.insthub.nearbuy.fragment.E0_ProfileFragment;
 import com.insthub.nearbuy.model.LoginModel;
-import com.insthub.nearbuy.model.ProtocolConst;
 import com.insthub.nearbuy.protocol.ApiInterface;
-
-import android.content.SharedPreferences.Editor;
-import android.content.SharedPreferences;
 
 public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 		BusinessResponse {
-
-	private CheckBox checkBox1;
-	static String YES = "yes";
-	static String NO = "no";
-	static String nm, passwd;
 
 	private ImageView back;
 	private Button login;
@@ -69,11 +60,8 @@ public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 	private String psd;
 
 	private LoginModel loginModel;
+	private CheckBox checkbox;
 	private final static int REQUEST_SIGN_UP = 1;
-
-	private String isMemory = "";// isMemory变量用来判断SharedPreferences有没有数据，包括上面的YES和NO
-	private String FILE = "saveUserNamePwd";// 用于保存SharedPreferences的文件
-	private SharedPreferences sp = null;// 声明一个SharedPreferences
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,25 +74,19 @@ public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 		password = (EditText) findViewById(R.id.login_password);
 		register = (TextView) findViewById(R.id.login_register);
 		register.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+		checkbox = (CheckBox) findViewById(R.id.checkbox1);
 
 		back.setOnClickListener(this);
 		login.setOnClickListener(this);
 		register.setOnClickListener(this);
+		checkbox.setOnClickListener(this);
 
-		checkBox1 = (CheckBox) findViewById(R.id.checkbox1);
-		sp = getSharedPreferences(FILE, MODE_PRIVATE);
-		isMemory = sp.getString("isMemory", NO);
-		// 进入界面时，这个if用来判断SharedPreferences里面name和password有没有数据，有的话则直接打在EditText上面
-		if (isMemory.equals(YES)) {
-			name = sp.getString("name", "");
-			psd = sp.getString("psd", "");
-			userName.setText(name);
-			password.setText(psd);
-		}
-		Editor editor = sp.edit();
-		editor.putString(name, userName.toString());
-		editor.putString(psd, password.toString());
-		editor.commit();
+//		SharedPreferencesForLogin spfl = new SharedPreferencesForLogin(A0_SigninActivity.this, "NB_User_Pwd");
+		SharedPreferences sharedPreference = this.getSharedPreferences("NB_User_Pwd", MODE_PRIVATE);
+		String userNameVaule = sharedPreference.getString("USERNAME", "");
+		String PasswordVaule = sharedPreference.getString("PASSWORD", "");
+		userName.setText(userNameVaule);
+		password.setText(PasswordVaule);
 
 	}
 
@@ -159,7 +141,7 @@ public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 				loginModel = new LoginModel(A0_SigninActivity.this);
 				loginModel.addResponseListener(this);
 				loginModel.login(name, psd);
-				remenber();
+				savePassword();
 				CloseKeyBoard();
 
 			}
@@ -170,6 +152,29 @@ public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 			break;
 		}
 
+	}
+
+	public void savePassword() {
+		if (checkbox.isChecked()) {
+			String userNameVaule = userName.getText().toString();
+			String passwordVaule = password.getText().toString();
+			
+			SharedPreferences sharedPreference = A0_SigninActivity.this.getSharedPreferences("NB_User_Pwd", MODE_PRIVATE);
+			
+			Editor myed = sharedPreference.edit();
+			
+			myed.putString("USERNAME", userNameVaule);
+			myed.putString("PASSWORD", passwordVaule);
+			myed.commit();
+			Toast.makeText(A0_SigninActivity.this, "密码已存储", Toast.LENGTH_LONG).show();
+		} else {
+			SharedPreferences sharedPreference = A0_SigninActivity.this.getSharedPreferences("NB_User_Pwd", MODE_PRIVATE);
+			Editor editor = sharedPreference.edit();
+			editor = sharedPreference.edit();
+			editor.clear();
+			editor.commit();
+			Toast.makeText(A0_SigninActivity.this, "密码未存储", Toast.LENGTH_LONG).show();
+		}
 	}
 
 	@Override
@@ -202,32 +207,6 @@ public class A0_SigninActivity extends BaseActivity implements OnClickListener,
 			}
 		}
 
-	}
-
-	// remenber方法用于判断是否记住密码，checkBox1选中时，提取出EditText里面的内容，放到SharedPreferences里面的name和password中
-	public void remenber() {
-		if (checkBox1.isChecked()) {
-
-			if (sp == null) {
-				sp = getSharedPreferences(FILE, MODE_PRIVATE);
-			}
-
-			Editor edit = sp.edit();
-			edit.putString("name", userName.getText().toString());
-			edit.putString("psd", password.getText().toString());
-			edit.putString("isMemory", YES);
-			edit.commit();
-		}
-
-		else if (!checkBox1.isChecked()) {
-
-			if (sp == null) {
-				sp = getSharedPreferences(FILE, MODE_PRIVATE);
-			}
-			Editor edit = sp.edit();
-			edit.putString("isMemory", NO);
-			edit.commit();
-		}
 	}
 
 	@Override
