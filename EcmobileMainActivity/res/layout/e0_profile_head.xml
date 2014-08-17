@@ -440,7 +440,8 @@
                 android:layout_marginTop="-2dip"
                 android:background="@drawable/item_layout_selector"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:visibility="gone" >
 
                 <TextView
                     android:layout_width="match_parent"
