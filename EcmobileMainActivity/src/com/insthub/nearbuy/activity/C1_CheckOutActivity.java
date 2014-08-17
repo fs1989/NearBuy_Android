@@ -53,12 +53,21 @@ import com.insthub.nearbuy.protocol.SHIPPING;
 import com.insthub.nearbuy.protocol.STATUS;
 import com.insthub.nearbuy.protocol.flowcheckOrderResponse;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener;
 import com.unionpay.UPPayAssistEx;
 import com.unionpay.uppay.PayActivity;
 
 public class C1_CheckOutActivity extends BaseActivity implements
 		OnClickListener, BusinessResponse {
 
+	private TextView deliveryComment1;
+	private TextView deliveryComment2;
+	private TextView deliveryComment3;
+	
+	private String value1;
+	private String value2;
+	private String value3;
+	
 	private TextView title;
 	private ImageView back;
 //	private MyDialogFragment newFragment;
@@ -135,6 +144,25 @@ public class C1_CheckOutActivity extends BaseActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.c1_check_out);
+		
+		MobclickAgent.updateOnlineConfig(this);
+		MobclickAgent.setOnlineConfigureListener(new UmengOnlineConfigureListener(){
+		  @Override
+		  public void onDataReceived(JSONObject data) {
+		  }
+		});
+		 value1 = MobclickAgent.getConfigParams(this, "Delivery_comment1");
+		 value2 = MobclickAgent.getConfigParams(this, "Delivery_comment2");
+		 value3 = MobclickAgent.getConfigParams(this, "Delivery_comment3");
+
+		 deliveryComment1 = (TextView) findViewById(R.id.delivery_comment1);
+		 deliveryComment2 = (TextView) findViewById(R.id.delivery_comment2);
+		 deliveryComment3 = (TextView) findViewById(R.id.delivery_comment3);
+
+		 deliveryComment1.setText(value1);
+		 deliveryComment2.setText(value2);
+		 deliveryComment3.setText(value3);
+		
 
 		title = (TextView) findViewById(R.id.top_view_text);
 		Resources resource = (Resources) getBaseContext().getResources();

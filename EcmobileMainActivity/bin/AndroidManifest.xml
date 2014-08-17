@@ -3,7 +3,6 @@
     package="com.insthub.nearbuy"
     android:versionCode="5"
     android:versionName="3.1" >
-
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />  
@@ -54,7 +53,7 @@
         <!-- 友盟用户反馈 -->
         <activity android:name="com.umeng.fb.ConversationActivity"
          		  android:theme="@android:style/Theme.Holo.Light"
-         		  android:label="用户反馈"
+         		  android:label="联系我们"
         		  android:parentActivityName="com.insthub.nearbuy.activity.EcmobileMainActivity"/>
         
         <activity android:name="com.umeng.fb.ContactActivity"

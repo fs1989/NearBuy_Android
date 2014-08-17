@@ -7,5 +7,6 @@
     
     <drawable name="color_b">#44aaaaaa</drawable>
 	<drawable name="color_a">#00000000</drawable>
+	<drawable name="color_text_gray">#383838</drawable>
 	
 </resources>

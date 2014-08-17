@@ -12,11 +12,11 @@ public final class R {
 		public static final int ic_launcher = 0x7f02004e;
 	}
 	public static final class id {
-		public static final int add = 0x7f09018e;
-		public static final int authorize = 0x7f09018d;
-		public static final int commoninterface = 0x7f090190;
-		public static final int exit = 0x7f090191;
-		public static final int readd = 0x7f09018f;
+		public static final int add = 0x7f090193;
+		public static final int authorize = 0x7f090192;
+		public static final int commoninterface = 0x7f090195;
+		public static final int exit = 0x7f090196;
+		public static final int readd = 0x7f090194;
 	}
 	public static final class layout {
 		public static final int main_layout = 0x7f030060;

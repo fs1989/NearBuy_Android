@@ -78,13 +78,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/body_cont"
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
         <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="50dp" >
+            android:layout_height="@dimen/textview_hight"
+            android:background="@drawable/white" >
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -99,23 +99,27 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="40dp"
+                android:layout_marginRight="5dp"
                 android:background="#ffffff"
                 android:hint="@string/login_username"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:singleLine="true"
                 android:textColor="#000000"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
         </FrameLayout>
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.1dp"
-            android:background="#c4c4c4" />
+            android:background="#c4c4c4"
+            android:visibility="gone" />
 
         <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="50dp" >
+            android:layout_height="@dimen/textview_hight"
+            android:background="@drawable/white"
+            android:layout_marginTop="-2dip" >
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -130,6 +134,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="40dp"
+                android:layout_marginRight="5dp"
                 android:background="#ffffff"
                 android:hint="@string/login_password"
                 android:paddingLeft="10dp"
@@ -137,7 +142,7 @@
                 android:password="true"
                 android:singleLine="true"
                 android:textColor="#000000"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
         </FrameLayout>
     </LinearLayout>
 	<Button

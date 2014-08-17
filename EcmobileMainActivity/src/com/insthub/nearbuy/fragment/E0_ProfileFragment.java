@@ -351,7 +351,7 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
             	
 			} else {
 				FeedbackAgent agent = new FeedbackAgent(mContext);
-				setUserName();
+//				setUserName();
 				agent.startFeedbackActivity();
 			}
 			break;

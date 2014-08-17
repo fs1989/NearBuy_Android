@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<string name="delivery_comment1">13点前下单，当日12:00-14:00配送</string>
+<string name="delivery_comment2">21点前下单，当日18:00-22:00配送</string>
+<string name="delivery_comment3">21点后下单，次日12:00-14:00配送</string>
+<string name="contact_us1">亲, 关于我们的产品和服务你萌有啥想说的, 欢迎随时给大叔留言! (如紧急, 可致电)</string>
+<string name="contact_us2">电话: 18131211210 (8点~24点可拨打)</string>
+<string name="contact_us3">百度燕大贴吧: @风雪诗昂 可以私信我你想说的话</string>    
+    
 <string name="lifecycle_all">All</string>
 <string name="lifecycle_visible">Visible</string>
 <string name="lifecycle_frontdeskoperation">Running in foreground</string>
@@ -27,7 +34,7 @@
 <string name="balance_address">Consignee address</string>
 <string name="balance_pay">Payment </string>
 <string name="balance_shipping">Shipping</string>
-<string name="balance_bill">Invoice</string>
+<string name="balance_bill">Comment</string>
 <string name="balance_list">Product list</string>
 <string name="balance_redpocket">Coupon</string>
 <string name="balance_exp">Score</string>
@@ -70,7 +77,7 @@
 <string name="score_submit">Submit</string>
 <string name="login_account">Account</string>
 <string name="login_login">Sign In</string>
-<string name="login_username">Phone Number </string>
+<string name="login_username">User account</string>
 <string name="login_password">Password</string>
 <string name="login_register">Sign up for free</string>
 <string name="profile_personal">Account</string>

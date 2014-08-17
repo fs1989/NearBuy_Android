@@ -42,15 +42,15 @@ public final class R {
 	public static final class id {
 		public static final int AlipayTitle = 0x7f09002c;
 		public static final int btn_refresh = 0x7f09002d;
-		public static final int dialog_button_group = 0x7f0900e7;
-		public static final int dialog_content_view = 0x7f0900e6;
-		public static final int dialog_divider = 0x7f0900e4;
-		public static final int dialog_message = 0x7f0900e5;
-		public static final int dialog_split_v = 0x7f0900e9;
-		public static final int dialog_title = 0x7f0900e3;
-		public static final int left_button = 0x7f0900e8;
+		public static final int dialog_button_group = 0x7f0900ec;
+		public static final int dialog_content_view = 0x7f0900eb;
+		public static final int dialog_divider = 0x7f0900e9;
+		public static final int dialog_message = 0x7f0900ea;
+		public static final int dialog_split_v = 0x7f0900ee;
+		public static final int dialog_title = 0x7f0900e8;
+		public static final int left_button = 0x7f0900ed;
 		public static final int mainView = 0x7f090028;
-		public static final int right_button = 0x7f0900ea;
+		public static final int right_button = 0x7f0900ef;
 		public static final int webView = 0x7f090029;
 	}
 	public static final class layout {

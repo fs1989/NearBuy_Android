@@ -101,7 +101,6 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="right"
-            android:paddingLeft="4dp"
             android:paddingTop="4dp"
             android:src="@drawable/close_btn" />
     </FrameLayout>

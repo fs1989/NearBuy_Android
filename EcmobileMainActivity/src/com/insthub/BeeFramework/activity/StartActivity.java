@@ -51,6 +51,9 @@ public class StartActivity extends Activity {
         super.onCreate(savedInstanceState);
         final View startView = View.inflate(this, R.layout.splash, null);
         setContentView(startView);
+        
+        MobclickAgent.updateOnlineConfig( context );
+        
         MobclickAgent.openActivityDurationTrack(false);
         MobclickAgent.onError(this);
         context = this;
