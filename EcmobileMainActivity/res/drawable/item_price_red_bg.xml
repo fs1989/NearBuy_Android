@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-        android:src = "@drawable/button_green_selector"
+        android:src = "@drawable/list_green_light"
         android:tileMode="repeat"  >
 </bitmap>
 
