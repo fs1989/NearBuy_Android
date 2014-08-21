@@ -7,7 +7,7 @@
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="160dp"
+        android:layout_height="160dip"
         android:background="@drawable/profile_img_bg" >
 
         <ImageView
@@ -29,8 +29,8 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/profile_avatar_bg" />
-
+                android:src="@drawable/profile_avatar_bg" >
+        	</ImageView>
             <com.insthub.BeeFramework.view.RoundedWebImageView
                 android:id="@+id/profile_head_photo"
                 android:layout_width="60dp"
@@ -57,8 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:textColor="#ffffff"
-            android:textSize="18dp" />
+            android:textColor="#cccccc"
+            android:textSize="12dp" />
 
         <LinearLayout
             android:id="@+id/member_level_layout"
@@ -87,7 +87,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:textColor="#cccccc"
-                android:textSize="14dp" />
+                android:textSize="12dp" />
         </LinearLayout>
     </FrameLayout>
 
@@ -101,7 +101,7 @@
             android:layout_width="fill_parent"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:background="@drawable/body_cont"
+            android:background="@drawable/white"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
 
@@ -274,184 +274,190 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/feedback"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="3.0dip" >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="给客服留言"
-                android:textColor="#000000"
-                android:textSize="14dp" />
-
-
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
-        </LinearLayout>
-        
-        <LinearLayout
-            android:id="@+id/profile_head_collect"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="@string/collect_myfavorite"
-                android:textColor="#000000"
-                android:textSize="14dp" />
-
-            <TextView
-                android:id="@+id/profile_head_collect_num"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:textColor="#a3a3a3"
-                android:textSize="16dp" />
+                android:layout_marginTop="5dp"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="联系我们"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
 
-        <LinearLayout
-            android:id="@+id/profile_head_notify"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="gone" >
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="@string/profile_message"
-                android:textColor="#000000"
-                android:textSize="16dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:id="@+id/profile_head_collect"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:textColor="#a3a3a3"
-                android:textSize="16dp" />
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/collect_myfavorite"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/profile_head_collect_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#a3a3a3"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_head_notify"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
+                android:layout_margin="10dp"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/profile_message"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#a3a3a3"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_head_address_manage"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
-        </LinearLayout>
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:id="@+id/profile_head_address_manage"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/manage_address"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="@string/manage_address"
-                android:textColor="#000000"
-                android:textSize="14dp" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+            <LinearLayout
+                android:id="@+id/profile_help"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
-        </LinearLayout>
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:id="@+id/profile_help"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/help"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="@string/help"
-                android:textColor="#000000"
-                android:textSize="14dp" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
+            <LinearLayout
+                android:id="@+id/profile_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_hight"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
-        </LinearLayout>
-        
-        <LinearLayout
-            android:id="@+id/profile_settings"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/body_cont"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/item_layout_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="@string/setting"
-                android:textColor="#000000"
-                android:textSize="14dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/setting"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
 
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/accsessory_arrow_right" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/accsessory_arrow_right" />
+            </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-        
     </LinearLayout>
-
-</LinearLayout>

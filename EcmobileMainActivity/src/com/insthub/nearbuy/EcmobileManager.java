@@ -13,7 +13,7 @@ public class EcmobileManager {
 	// 获取友盟key
 	public static String getUmengKey(Context context)
     {
-        return "xxx";
+        return "5347e9d656240b720f01983a";
 	}
 	
 	// 获取快递key

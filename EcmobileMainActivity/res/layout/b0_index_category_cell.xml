@@ -13,7 +13,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/body_cont_bg"
+        android:background="@drawable/white"
         android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal" >

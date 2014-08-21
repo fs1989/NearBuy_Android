@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.insthub.nearbuy"
-    android:versionCode="5"
-    android:versionName="3.1" >
-
+    android:versionCode="3"
+    android:versionName="3.0" >
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />  
-     
     <uses-permission android:name="android.permission.CAMERA" /> 
 	<uses-feature android:name="android.hardware.camera.autofocus" />
     
@@ -54,7 +52,7 @@
         <!-- 友盟用户反馈 -->
         <activity android:name="com.umeng.fb.ConversationActivity"
          		  android:theme="@android:style/Theme.Holo.Light"
-         		  android:label="用户反馈"
+         		  android:label="联系我们"
         		  android:parentActivityName="com.insthub.nearbuy.activity.EcmobileMainActivity"/>
         
         <activity android:name="com.umeng.fb.ContactActivity"
@@ -343,7 +341,16 @@
                   android:exported="true"
                   android:process=":bdservice_v1" />
         <activity android:screenOrientation="portrait" android:name=".activity.CustomerCenterActivity"></activity>
-
+        
+        <!-- 友盟自动更新 -->
+        <service
+		    android:name="com.umeng.update.net.DownloadingService"
+		    android:process=":DownloadingService" >
+		</service>
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
     </application>
 
 </manifest>

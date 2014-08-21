@@ -29,7 +29,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/body_cont"
+                android:background="@drawable/white"
                 android:orientation="vertical" >
 
                 <LinearLayout
@@ -124,7 +124,7 @@
                 android:text="@string/setting_official"
                 android:textColor="#0f85ba"
                 android:textSize="17dp"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -132,7 +132,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/body_cont"
                 android:orientation="vertical"
-                android:visibility="visible" >
+                android:visibility="gone" >
 
                 <LinearLayout
                     android:id="@+id/setting_mobile_layout"
@@ -258,7 +258,8 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/setting_tech"
                 android:textColor="#0f85ba"
-                android:textSize="17dp" />
+                android:textSize="17dp"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -267,7 +268,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/body_cont"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:visibility="gone" >
 
                 <LinearLayout
                     android:id="@+id/setting_support"
@@ -301,10 +303,10 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/setting_log_out_btn_red"
+                android:background="@drawable/button_gray_selector"
                 android:text="@string/setting_logout"
                 android:textColor="#ffffff"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
             <View
                 android:layout_width="fill_parent"

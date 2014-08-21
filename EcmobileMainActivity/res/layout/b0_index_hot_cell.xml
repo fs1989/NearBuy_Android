@@ -34,8 +34,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:padding="2dp"
                     android:layout_marginTop="@dimen/recomment_margin"
-                    android:background="@drawable/body_cont_bg"
+                    android:background="@drawable/white"
                     android:gravity="center" >
 
                     <ImageView
@@ -43,6 +44,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
                         android:layout_gravity="center"
+                        android:scaleType="centerCrop"
                         android:layout_margin="1.5dp"
                         android:src="@drawable/default_image" />
                 </LinearLayout>
@@ -54,9 +56,8 @@
                     android:layout_gravity="top|left"
                     android:layout_marginLeft="1.5dp"
                     android:layout_marginTop="@dimen/price_margin"
-                    android:background="@drawable/item_grid_body_price_bg_red"
+                    android:background="@drawable/item_price_red_bg"
                     android:gravity="center"
-                    android:paddingRight="5dp"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/price_textsize" />
@@ -74,7 +75,8 @@
                     android:text="@string/hotselling_recommend"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="10dp" />
+                    android:textSize="10dp"
+                    android:visibility="gone" />
             </FrameLayout>
 
             <FrameLayout
@@ -91,14 +93,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:padding="2dp"
                     android:layout_marginTop="@dimen/recomment_margin"
-                    android:background="@drawable/body_cont_bg"
+                    android:background="@drawable/white"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/good_cell_photo_two"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
+                        android:scaleType="centerCrop"
                         android:layout_gravity="center"
                         android:layout_margin="1.5dp"
                         android:src="@drawable/default_image" />
@@ -111,9 +115,8 @@
                     android:layout_gravity="left|top"
                     android:layout_marginLeft="1.5dp"
                     android:layout_marginTop="@dimen/price_margin"
-                    android:background="@drawable/item_grid_body_price_bg_red"
+                    android:background="@drawable/item_price_red_bg"
                     android:gravity="center"
-                    android:paddingRight="5dp"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/price_textsize" />
 
@@ -129,7 +132,8 @@
                     android:minWidth="@dimen/recomment_width"
                     android:text="@string/hotselling_recommend"
                     android:textColor="#ffffff"
-                    android:textSize="10dp" />
+                    android:textSize="10dp"
+                    android:visibility="gone" />
             </FrameLayout>
         </LinearLayout>
     </LinearLayout>

@@ -124,12 +124,12 @@ public class C0_ShoppingCartActivity extends BaseActivity  implements BusinessRe
                 }
                 if (msg.what == C0_ShoppingCartAdapter.CART_CHANGE_CHANGE1) {
                 	footer_balance.setEnabled(false);
-                	footer_balance.setBackgroundResource(R.drawable.item_info_add_cart_desabled_btn_red_b);
+                	footer_balance.setBackgroundResource(R.drawable.button_green_selector);
                 	cart_icon.setImageResource(R.drawable.shopping_cart_acc_cart_icon);
                 }
                 if (msg.what == C0_ShoppingCartAdapter.CART_CHANGE_CHANGE2) {
                 	footer_balance.setEnabled(true);
-                	footer_balance.setBackgroundResource(R.drawable.button_red);
+                	footer_balance.setBackgroundResource(R.drawable.button_green_selector);
                 	cart_icon.setImageResource(R.drawable.shopping_cart_acc_cart_icon);
                 }
             } 
@@ -167,7 +167,7 @@ public class C0_ShoppingCartActivity extends BaseActivity  implements BusinessRe
             xlistView.setAdapter(shopCarAdapter);
 
             footer_balance.setEnabled(true);
-        	footer_balance.setBackgroundResource(R.drawable.button_red);
+        	footer_balance.setBackgroundResource(R.drawable.button_green_selector);
         	cart_icon.setImageResource(R.drawable.shopping_cart_acc_cart_icon);
             
             shopCarAdapter.parentHandler = messageHandler;

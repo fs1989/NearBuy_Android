@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="130dp"
-        android:text="没有结果"
+        android:text="您还没有该类型的订单"
         android:textColor="#999999"
         android:textSize="18dp" />
 

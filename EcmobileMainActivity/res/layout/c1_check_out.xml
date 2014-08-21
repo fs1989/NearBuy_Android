@@ -22,7 +22,7 @@
                 android:id="@+id/balance_user"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/body_cont"
+                android:background="@drawable/list_seletor"
                 android:orientation="vertical" >
 
                 <ImageView
@@ -35,7 +35,7 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/textview_hight"
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
@@ -77,12 +77,14 @@
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/line" />
+                    android:background="@drawable/line"
+                    android:visibility="visible" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/textview_hight"
                     android:gravity="center_vertical"
+                    android:layout_margin="0dip"
                     android:orientation="horizontal" >
 
                     <TextView
@@ -106,14 +108,49 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/body_cont"
-                android:orientation="vertical" >
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="5dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/delivery_comment1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/delivery_comment1"
+                    android:textColor="@color/TextColorGray" />
+
+                <TextView
+                    android:id="@+id/delivery_comment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/delivery_comment2"
+                    android:textColor="@color/TextColorGray" />
+
+                <TextView
+                    android:id="@+id/delivery_comment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/delivery_comment3"
+                    android:textColor="@color/TextColorGray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
 
                 <LinearLayout
                     android:id="@+id/balance_pay"
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:background="@drawable/list_seletor"
+                    android:layout_height="@dimen/textview_hight"
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
@@ -158,12 +195,15 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="0.1dp"
-                    android:background="#c4c4c4" />
+                    android:background="#c4c4c4"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/balance_dis"
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/textview_hight"
+                    android:background="@drawable/list_seletor"
+                    android:layout_marginTop="-2dip"
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
@@ -207,12 +247,15 @@
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="0.1dp"
-                    android:background="#c4c4c4" />
+                    android:background="#c4c4c4"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/delivery_time"
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/textview_hight"
+                    android:background="@drawable/list_seletor"
+                    android:layout_marginTop="-2dip"
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
@@ -246,12 +289,15 @@
 				<View
                     android:layout_width="fill_parent"
                     android:layout_height="0.1dp"
-                    android:background="#c4c4c4" />
+                    android:background="#c4c4c4"
+                    android:visibility="gone" />
                 
                 <LinearLayout
                     android:id="@+id/balance_invoice"
                     android:layout_width="fill_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/textview_hight"
+                    android:background="@drawable/list_seletor"
+                    android:layout_marginTop="-2dip"
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
@@ -404,23 +450,24 @@
                         android:src="@drawable/accsessory_arrow_right" />
                 </LinearLayout>
             </LinearLayout>
-
+            
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginRight="-5dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shopping_checkout_body_bg"
+                android:background="@drawable/white"
                 android:orientation="vertical" >
 
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:text="@string/balance_detail"
                     android:textColor="#000000"
-                    android:textSize="20dp" />
+                    android:textSize="14dp" />
 
                 <LinearLayout
                     android:id="@+id/balance_body"
@@ -433,10 +480,11 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+ 					android:visibility="gone" >
 
                     <TextView
                         android:layout_width="match_parent"
@@ -519,29 +567,24 @@
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/line" />
+                    android:background="@drawable/line"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginRight="-5dp"
-                android:background="@drawable/shopping_cart_body_bg_02"
+                android:layout_height="@dimen/textview_hight"
+                android:layout_marginTop="-2dip"
+                android:background="@drawable/white"
+                android:gravity="center"
                 android:orientation="horizontal" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-20dp"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical" >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="15dp"
+                    	android:layout_marginRight="15dp"
                         android:text="@string/balance_rental"
                         android:textColor="#939393"
                         android:textSize="20dp" />
@@ -550,19 +593,22 @@
                         android:id="@+id/balance_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                    	android:layout_marginRight="15dp"
                         android:text="￥132000"
                         android:textColor="#ff0000"
                         android:textSize="20dp" />
-                </LinearLayout>
 
-                <FrameLayout
+                
+            </LinearLayout>
+            
+            <FrameLayout
                     android:id="@+id/balance_submit"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="-10dp"
-                    android:background="@drawable/button_red" >
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/umeng_fb_btn_bg_selector" >
 
 
                     <TextView
@@ -573,7 +619,7 @@
                         android:textColor="#f3f3f3"
                         android:textSize="16dp" />
                 </FrameLayout>
-            </LinearLayout>
+            
         </LinearLayout>
     </ScrollView>
 

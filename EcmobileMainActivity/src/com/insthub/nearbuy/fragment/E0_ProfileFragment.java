@@ -334,7 +334,6 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 		
 	}
 	
-	
 	@Override
 	public void onClick(View v) {
 		 
@@ -516,8 +515,11 @@ public class E0_ProfileFragment extends BaseFragment implements IXListViewListen
 //                 intent = new Intent(getActivity(), CustomerCenterActivity.class);
 //                 startActivityForResult(intent, 1);
 //                 startActivity(intent);
-//                 getActivity().overridePendingTransition(R.anim.push_right_in,
-//                         R.anim.push_right_out);
+//                 getActivity().overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+ 				 
+ 				 intent = new Intent(getActivity(), G0_SettingActivity.class);
+ 				 startActivity(intent);
+ 				 getActivity().overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
              }
         	 break;
            
