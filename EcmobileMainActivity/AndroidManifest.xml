@@ -6,6 +6,7 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />  
+    <!-- 测试 -->
     <uses-permission android:name="android.permission.CAMERA" /> 
 	<uses-feature android:name="android.hardware.camera.autofocus" />
     
