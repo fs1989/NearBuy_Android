@@ -214,8 +214,8 @@
 
 
         <activity android:name="com.insthub.nearbuy.activity.SpecificationActivity"
-            	  android:screenOrientation="portrait" 
-            	  android:theme="@style/dialog"/>
+            	  android:screenOrientation="portrait"
+            	  android:theme="@android:style/Theme.Holo.Light.Dialog"/>
 
         <activity android:name="com.insthub.BeeFramework.activity.FullScreenPhotoActivity"
             	  android:screenOrientation="portrait" />

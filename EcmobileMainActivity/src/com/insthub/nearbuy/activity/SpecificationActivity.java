@@ -61,6 +61,7 @@ public class SpecificationActivity extends Activity implements BusinessResponse
         super.onCreate(savedInstanceState);
         setContentView(R.layout.specification_activity);
         
+        setTitle("请选择购买数量");
         Intent intent = getIntent();
         num = intent.getIntExtra("num", 0);
         creat_cart = intent.getBooleanExtra("creat_cart", false);

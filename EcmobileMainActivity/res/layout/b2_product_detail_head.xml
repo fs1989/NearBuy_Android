@@ -12,7 +12,8 @@
         <com.insthub.BeeFramework.view.MyScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp" >
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,20 +81,51 @@
                     android:paddingBottom="0dp"
                     android:paddingTop="0dp" />
 
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+					
+					<TextView
+	                    android:id="@+id/dc1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:text=""
+	                    android:visibility="visible" />
+					<TextView
+	                    android:id="@+id/dc2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:text=""
+	                    android:visibility="visible" />
+					<TextView
+	                    android:id="@+id/dc3"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:text=""
+	                    android:visibility="visible" />
+	                    
+                </LinearLayout>
+                
+                
                 <TextView
                     android:id="@+id/good_property"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:lineSpacingExtra="5dp" />
+                    android:lineSpacingExtra="5dp"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/body_cont_bg"
                     android:gravity="center" >
@@ -119,8 +151,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/body_cont"
                     android:gravity="center"
@@ -132,7 +162,8 @@
                         android:layout_height="45dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:gravity="center" >
+                        android:gravity="center"
+                        android:visibility="gone" >
 
                         <TextView
                             android:layout_width="fill_parent"
@@ -188,7 +219,8 @@
                         android:layout_height="45dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:gravity="center" >
+                        android:gravity="center"
+                        android:visibility="gone"  >
 
                         <TextView
                             android:layout_width="fill_parent"

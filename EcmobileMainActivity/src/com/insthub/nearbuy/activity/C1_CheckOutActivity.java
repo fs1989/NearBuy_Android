@@ -64,9 +64,9 @@ public class C1_CheckOutActivity extends BaseActivity implements
 	private TextView deliveryComment2;
 	private TextView deliveryComment3;
 	
-	private String value1;
-	private String value2;
-	private String value3;
+	private static String value1;
+	private static String value2;
+	private static String value3;
 	
 	private TextView title;
 	private ImageView back;
@@ -128,7 +128,7 @@ public class C1_CheckOutActivity extends BaseActivity implements
 	private OrderModel orderModel;
 	private String UPPay_mMode = "00";// 银联环境设置
 	private ORDER_INFO order_info;
-	private Context mContext;
+	private Context mContext = null;
 	private final static int REQUEST_ADDRESS_LIST = 1;
 	private final static int REQUEST_PAYMENT = 2;
 	private final static int REQUEST_Distribution = 3;
@@ -146,11 +146,11 @@ public class C1_CheckOutActivity extends BaseActivity implements
 		setContentView(R.layout.c1_check_out);
 		
 		MobclickAgent.updateOnlineConfig(this);
-		MobclickAgent.setOnlineConfigureListener(new UmengOnlineConfigureListener(){
-		  @Override
-		  public void onDataReceived(JSONObject data) {
-		  }
-		});
+//		MobclickAgent.setOnlineConfigureListener(new UmengOnlineConfigureListener(){
+//		  @Override
+//		  public void onDataReceived(JSONObject data) {
+//		  }
+//		});
 		 value1 = MobclickAgent.getConfigParams(this, "Delivery_comment1");
 		 value2 = MobclickAgent.getConfigParams(this, "Delivery_comment2");
 		 value3 = MobclickAgent.getConfigParams(this, "Delivery_comment3");
@@ -898,5 +898,17 @@ public class C1_CheckOutActivity extends BaseActivity implements
 				orderModel.orderPay(order_info.order_id);
 			}
 		});
+	}
+
+	public static String getValue1() {
+		return value1;
+	}
+
+	public static String getValue2() {
+		return value2;
+	}
+
+	public static String getValue3() {
+		return value3;
 	}
 }

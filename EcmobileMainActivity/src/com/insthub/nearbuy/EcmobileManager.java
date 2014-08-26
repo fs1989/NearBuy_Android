@@ -42,37 +42,37 @@ public class EcmobileManager {
 	// 获取支付宝parterID(合作者身份)
 	public static String getAlipayParterId(Context context)
     {
-        return "xxx";
+        return "";//2088302063277912";
 	}
 	
 	// 获取支付宝sellerID(收款账户)
 	public static String getAlipaySellerId(Context context)
     {
-        return "xxx";
+        return "";//zhangdan0525@outlook.com";
 	}
 	
 	// 获取支付宝key
 	public static String getAlipayKey(Context context)
     {
-        return "xxx";
+        return "";//pz4u5nxsxplhq8i84sftwg6ide2iexnd";
 	}
 	
 	// 获取支付宝rsa_alipay_public(公钥)
 	public static String getRsaAlipayPublic(Context context)
     {
-        return "xxx";
+        return "";//MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/ygHdNmT9zs5aRE+EArtW4HaWmWbtIlvN3VwGUzvrxDbj1YZlpHfHigygyVXWAJrx0srN25rtQnz2iFmzLAyZNwXlLrOAfY4tzWAGAZ5VaNgAlFv95cAMh5S2v3LB2oAxmsF7r+vpDm+V7wM0US4xfxreeEAOWZGBF0a";
 	}
 	
 	// 获取支付宝rsa_private(私钥)
 	public static String getRsaPrivate(Context context)
     {
-        return "xxx";
+        return "";//MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxj/9qwVfgoUh/y2W89L6BkRAFljhNhgPdyPuBV64bfQNN1PjbCzkIM6qRdKBoLPXmKKMiFYnkd6rAoprih3/PrQEB/VsW8OoM8fxn67UDYuyBTqA23MML9q1+ilIZwBC2AQ2UBVOrFXfFl75p6/B5KsiNG9zpgmLCUYuLkxpLQIDAQAB";
 	}
 	
 	// 获取支付宝回调地址
 	public static String getAlipayCallback(Context context)
     {
-        return "xxx";
+        return ""; //http://115.28.107.78/ecmobile/payment/alipay/sdk/notify_url.php
 	}
 	
 	// 获取新浪key
