@@ -19,7 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 
 public class XListViewCart extends ListView implements OnScrollListener {

@@ -1,9 +1,11 @@
 package com.insthub.BeeFramework.model;
 
 import android.content.Context;
+
 import com.external.androidquery.AQuery;
 import com.external.androidquery.callback.AjaxCallback;
-import com.insthub.nearbuy.ECMobileAppConst;
+
+import hk.nearbuy.nearbuy.ECMobileAppConst;
 
 import java.util.Map;
 

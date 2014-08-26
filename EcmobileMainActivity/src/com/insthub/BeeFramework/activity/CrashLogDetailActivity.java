@@ -2,7 +2,7 @@ package com.insthub.BeeFramework.activity;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 /*
  *	 ______    ______    ______

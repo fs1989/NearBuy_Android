@@ -44,7 +44,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 public class WebViewActivity extends BaseActivity{
 

@@ -7,7 +7,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 /*
  *	 ______    ______    ______

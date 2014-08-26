@@ -45,7 +45,7 @@ import com.insthub.BeeFramework.BeeFrameworkApp;
 import com.insthub.BeeFramework.Utils.CustomExceptionHandler;
 import com.insthub.BeeFramework.model.BeeQuery;   import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 

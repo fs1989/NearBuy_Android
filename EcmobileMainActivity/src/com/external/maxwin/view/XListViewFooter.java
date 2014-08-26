@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 
 public class XListViewFooter extends LinearLayout {

@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import com.insthub.BeeFramework.service.MemoryService;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 import com.insthub.BeeFramework.model.BeeCallback;
 
 public class FloatViewSettingActivity extends BaseActivity {

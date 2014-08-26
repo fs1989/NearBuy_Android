@@ -53,8 +53,9 @@ import com.external.activeandroid.app.Application;
 import com.insthub.BeeFramework.Utils.CustomExceptionHandler;
 import com.insthub.BeeFramework.activity.DebugCancelDialogActivity;
 import com.insthub.BeeFramework.activity.DebugTabActivity;
-import com.insthub.nearbuy.R;
-import com.insthub.nearbuy.protocol.SESSION;
+
+import hk.nearbuy.nearbuy.R;
+import hk.nearbuy.nearbuy.protocol.SESSION;
 
 public class BeeFrameworkApp extends Application implements OnClickListener{
     private static BeeFrameworkApp instance;

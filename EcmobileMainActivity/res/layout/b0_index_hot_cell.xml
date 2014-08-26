@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.insthub.nearbuy.component.HotSellingCell xmlns:android="http://schemas.android.com/apk/res/android"
+<hk.nearbuy.nearbuy.component.HotSellingCell xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/body"
@@ -138,4 +138,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</com.insthub.nearbuy.component.HotSellingCell>
+</hk.nearbuy.nearbuy.component.HotSellingCell>

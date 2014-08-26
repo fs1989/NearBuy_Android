@@ -31,9 +31,17 @@ package com.insthub.BeeFramework.service;
  *	IN THE SOFTWARE.
  */
 
+import hk.nearbuy.nearbuy.ECMobileAppConst;
+import hk.nearbuy.nearbuy.EcmobileManager;
+import hk.nearbuy.nearbuy.activity.B1_ProductListActivity;
+import hk.nearbuy.nearbuy.activity.BannerWebActivity;
+import hk.nearbuy.nearbuy.activity.EcmobileMainActivity;
+import hk.nearbuy.nearbuy.protocol.FILTER;
+
 import java.util.List;
 
 import com.insthub.BeeFramework.BeeFrameworkConst;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -42,12 +50,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.baidu.frontia.api.FrontiaPushMessageReceiver;
-import com.insthub.nearbuy.ECMobileAppConst;
-import com.insthub.nearbuy.EcmobileManager;
-import com.insthub.nearbuy.activity.B1_ProductListActivity;
-import com.insthub.nearbuy.activity.BannerWebActivity;
-import com.insthub.nearbuy.activity.EcmobileMainActivity;
-import com.insthub.nearbuy.protocol.FILTER;
 
 public class PushMessageReceiver extends FrontiaPushMessageReceiver {
 

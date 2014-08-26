@@ -13,7 +13,7 @@ import com.insthub.BeeFramework.BeeFrameworkConst;
 import com.insthub.BeeFramework.adapter.CrashLogAdapter;
 import com.insthub.BeeFramework.protocol.CrashMessage;
 import com.external.maxwin.view.XListView;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 import org.apache.http.util.EncodingUtils;
 
 import java.io.File;

@@ -2,7 +2,7 @@ package com.external.maxwin.view;
 
 import java.util.Date;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 import android.content.Context;
 import android.util.AttributeSet;

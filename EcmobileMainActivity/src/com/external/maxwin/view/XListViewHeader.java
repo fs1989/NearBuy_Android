@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 public class XListViewHeader extends LinearLayout {
 	private LinearLayout mContainer;

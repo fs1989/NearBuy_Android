@@ -2,7 +2,7 @@ package com.insthub.BeeFramework.view;
 
 import android.content.DialogInterface;
 import android.view.KeyEvent;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 import android.app.Dialog;
 import android.content.Context;

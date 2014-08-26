@@ -39,7 +39,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 import com.insthub.BeeFramework.adapter.DebugListAdapter;
 import com.insthub.BeeFramework.model.DebugMessageModel;
 

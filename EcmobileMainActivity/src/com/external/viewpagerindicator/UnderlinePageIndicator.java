@@ -31,7 +31,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 /**
  * Draws a line for each page. The current page line is colored differently

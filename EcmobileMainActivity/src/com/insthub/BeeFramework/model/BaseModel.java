@@ -34,6 +34,7 @@ package com.insthub.BeeFramework.model;
 import java.util.ArrayList;
 
 import android.content.res.Resources;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -45,12 +46,13 @@ import android.widget.Toast;
 
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.view.ToastView;
-import com.insthub.nearbuy.ErrorCodeConst;
-import com.insthub.nearbuy.R;
-import com.insthub.nearbuy.activity.A0_SigninActivity;
-import com.insthub.nearbuy.fragment.E0_ProfileFragment;
-import com.insthub.nearbuy.protocol.SESSION;
-import com.insthub.nearbuy.protocol.STATUS;
+
+import hk.nearbuy.nearbuy.ErrorCodeConst;
+import hk.nearbuy.nearbuy.R;
+import hk.nearbuy.nearbuy.activity.A0_SigninActivity;
+import hk.nearbuy.nearbuy.fragment.E0_ProfileFragment;
+import hk.nearbuy.nearbuy.protocol.SESSION;
+import hk.nearbuy.nearbuy.protocol.STATUS;
 
 public class BaseModel implements BusinessResponse{
 

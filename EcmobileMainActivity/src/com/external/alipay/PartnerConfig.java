@@ -1,7 +1,6 @@
 package com.external.alipay;
 
-import com.insthub.nearbuy.EcmobileManager;
-
+import hk.nearbuy.nearbuy.EcmobileManager;
 import android.content.Context;
 
 public class PartnerConfig {

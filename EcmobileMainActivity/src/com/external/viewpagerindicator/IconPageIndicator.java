@@ -29,7 +29,7 @@ import android.widget.ImageView;
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
-import com.insthub.nearbuy.R;
+import hk.nearbuy.nearbuy.R;
 
 /**
  * This widget implements the dynamic action bar tab behavior that can change
