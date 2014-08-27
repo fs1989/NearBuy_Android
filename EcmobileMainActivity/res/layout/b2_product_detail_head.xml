@@ -91,23 +91,26 @@
 					
 					<TextView
 	                    android:id="@+id/dc1"
-	                    android:layout_width="wrap_content"
+	                    android:layout_width="match_parent"
 	                    android:layout_height="wrap_content"
 	                    android:layout_margin="5dp"
+	                    android:gravity="center"
 	                    android:text=""
 	                    android:visibility="visible" />
 					<TextView
 	                    android:id="@+id/dc2"
-	                    android:layout_width="wrap_content"
+	                    android:layout_width="match_parent"
 	                    android:layout_height="wrap_content"
 	                    android:layout_margin="5dp"
+	                    android:gravity="center"
 	                    android:text=""
 	                    android:visibility="visible" />
 					<TextView
 	                    android:id="@+id/dc3"
-	                    android:layout_width="wrap_content"
+	                    android:layout_width="match_parent"
 	                    android:layout_height="wrap_content"
 	                    android:layout_margin="5dp"
+	                    android:gravity="center"
 	                    android:text=""
 	                    android:visibility="visible" />
 	                    
@@ -135,7 +138,7 @@
                         android:id="@+id/good_category"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_weight="1"
                         android:lineSpacingExtra="5dp"
                         android:textColor="#333333" />
