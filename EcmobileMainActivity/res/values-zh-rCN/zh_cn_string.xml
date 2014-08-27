@@ -351,7 +351,7 @@
 <string name="network_unreachable">网络不可用</string>
 <string name="network_wifi">已切换到WIFI模式</string>
 <string name="network_wlan">已切换到WLAN模式</string>
-<string name="help">帮助</string>
+<string name="help">通知</string>
 <string name="brand">品牌</string>
 <string name="advance_search">高级搜索</string>
 <string name="filter">筛选</string>

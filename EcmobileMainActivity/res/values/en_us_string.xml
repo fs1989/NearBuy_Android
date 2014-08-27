@@ -349,7 +349,7 @@
 <string name="network_unreachable">Network unavailable</string>
 <string name="network_wifi">Switched to WIFI mode</string>
 <string name="network_wlan">Switched to WLAN mode</string>
-<string name="help">Help</string>
+<string name="help">Notification</string>
 <string name="brand">Brand</string>
 <string name="advance_search">Advance_search</string>
 <string name="filter">Filter</string>

@@ -112,7 +112,7 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:padding="5dp"
-                android:visibility="visible" >
+                android:visibility="gone" >
 
                 <TextView
                     android:id="@+id/delivery_comment1"
