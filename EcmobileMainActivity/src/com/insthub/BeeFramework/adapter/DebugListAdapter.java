@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 import com.insthub.BeeFramework.model.DebugMessageModel;
 
 /*

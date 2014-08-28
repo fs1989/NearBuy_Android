@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 
 public class MyProgressDialog {
 	

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hk.nearbuy.nearbuy.component.AdvanceSearchValueCell xmlns:android="http://schemas.android.com/apk/res/android"
+<com.insthub.nearbuy.component.AdvanceSearchValueCell xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
@@ -64,4 +64,4 @@
             android:visibility="gone" />
     </FrameLayout>
 
-</hk.nearbuy.nearbuy.component.AdvanceSearchValueCell>
+</com.insthub.nearbuy.component.AdvanceSearchValueCell>

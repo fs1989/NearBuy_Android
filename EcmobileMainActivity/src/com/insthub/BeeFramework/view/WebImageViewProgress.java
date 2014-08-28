@@ -12,7 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.animation.*;
 import com.external.activeandroid.util.Log;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 
 /*
  *	 ______    ______    ______

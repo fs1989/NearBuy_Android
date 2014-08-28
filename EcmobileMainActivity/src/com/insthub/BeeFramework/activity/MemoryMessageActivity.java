@@ -16,7 +16,7 @@ import android.text.format.Formatter;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 import com.insthub.BeeFramework.model.BeeCallback;
 
 import java.util.ArrayList;

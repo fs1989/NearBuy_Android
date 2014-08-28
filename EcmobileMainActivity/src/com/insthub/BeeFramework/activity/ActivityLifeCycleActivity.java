@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 import com.insthub.BeeFramework.adapter.ActivitylifeCycleAdapter;
 import com.insthub.BeeFramework.model.ActivityManagerModel;
 import com.external.maxwin.view.XListView;

@@ -15,9 +15,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.view.View;
-
 import com.insthub.BeeFramework.view.MyDialog;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,12 +33,12 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import hk.nearbuy.nearbuy.R;
-import hk.nearbuy.nearbuy.activity.AlixPayActivity;
-import hk.nearbuy.nearbuy.activity.EcmobileMainActivity;
-import hk.nearbuy.nearbuy.activity.PayWebActivity;
-import hk.nearbuy.nearbuy.protocol.ORDER_INFO;
-import hk.nearbuy.nearbuy.protocol.SESSION;
+import com.insthub.nearbuy.R;
+import com.insthub.nearbuy.activity.AlixPayActivity;
+import com.insthub.nearbuy.activity.EcmobileMainActivity;
+import com.insthub.nearbuy.activity.PayWebActivity;
+import com.insthub.nearbuy.protocol.ORDER_INFO;
+import com.insthub.nearbuy.protocol.SESSION;
 
 /**
  * 检测安全支付服务是否正确安装，如果没有安装进行本地安装，或者下载安装， 检测安全支付服务版本，有新版本时进行下载。

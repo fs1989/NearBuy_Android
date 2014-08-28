@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<hk.nearbuy.nearbuy.component.GoodItemLargeCell xmlns:android="http://schemas.android.com/apk/res/android"
+<com.insthub.nearbuy.component.GoodItemLargeCell xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/good_list_bg"
@@ -57,4 +57,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</hk.nearbuy.nearbuy.component.GoodItemLargeCell>
+</com.insthub.nearbuy.component.GoodItemLargeCell>

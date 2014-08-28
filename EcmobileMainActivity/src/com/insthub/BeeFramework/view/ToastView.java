@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 
 public class ToastView {
 	

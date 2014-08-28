@@ -37,7 +37,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 
 import java.util.ArrayList;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 
 /**
  * A TitlePageIndicator is a PageIndicator which displays the title of left view

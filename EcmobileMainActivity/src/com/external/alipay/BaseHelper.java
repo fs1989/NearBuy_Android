@@ -6,12 +6,12 @@
 
 package com.external.alipay;
 
-import hk.nearbuy.nearbuy.activity.AlixPayActivity;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import com.insthub.nearbuy.activity.AlixPayActivity;
 
 import org.json.JSONObject;
 

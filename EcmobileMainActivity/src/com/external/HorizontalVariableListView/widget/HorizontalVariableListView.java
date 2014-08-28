@@ -42,7 +42,7 @@ import android.view.ViewParent;
 import android.view.ViewTreeObserver.OnScrollChangedListener;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 
 
 public class HorizontalVariableListView extends HorizontalListView implements OnGestureListener, FlingRunnableView {

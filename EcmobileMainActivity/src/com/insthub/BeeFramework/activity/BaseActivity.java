@@ -39,7 +39,7 @@ import android.os.Handler;
 import android.os.Message;
 import com.insthub.BeeFramework.model.ActivityManagerModel;
 import com.insthub.BeeFramework.model.BusinessMessage;
-import hk.nearbuy.nearbuy.R;
+import com.insthub.nearbuy.R;
 import org.json.JSONException;
 
 @SuppressLint("NewApi")

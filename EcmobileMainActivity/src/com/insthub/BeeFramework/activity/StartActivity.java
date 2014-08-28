@@ -39,10 +39,9 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import hk.nearbuy.nearbuy.R;
-import hk.nearbuy.nearbuy.activity.EcmobileMainActivity;
-import hk.nearbuy.nearbuy.activity.GalleryImageActivity;
-
+import com.insthub.nearbuy.R;
+import com.insthub.nearbuy.activity.EcmobileMainActivity;
+import com.insthub.nearbuy.activity.GalleryImageActivity;
 import com.umeng.analytics.MobclickAgent;
 
 public class StartActivity extends Activity {
