@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 
@@ -38,6 +39,11 @@ import com.insthub.BeeFramework.view.ToastView;
 import com.insthub.nearbuy.EcmobileManager;
 import com.insthub.nearbuy.R;
 import com.insthub.nearbuy.protocol.FILTER;
+import com.tencent.android.tpush.XGIOperateCallback;
+import com.tencent.android.tpush.XGPushConfig;
+import com.tencent.android.tpush.XGPushManager;
+import com.tencent.android.tpush.common.Constants;
+import com.tencent.android.tpush.service.cache.CacheManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -64,10 +70,27 @@ public class EcmobileMainActivity extends FragmentActivity
     {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
+	    XGPushConfig.enableDebug(this, true);
+	    
 	    
 	    UmengUpdateAgent.silentUpdate(this);
 	    FeedbackAgent agent = new FeedbackAgent(this);
 	    agent.sync();
+	    
+	    XGPushManager.registerPush(getApplicationContext());
+//	    XGPushManager.registerPush(getApplicationContext(),
+//				new XGIOperateCallback() {
+//					@Override
+//					public void onSuccess(Object data, int flag) {
+//						System.out.println("注册成功");
+//					}
+//
+//					@Override
+//					public void onFail(Object data, int errCode, String msg) {
+//						System.out.println("注册失败");
+//					}
+//				});
+
 	    
 	    Intent intent = new Intent();
 		intent.setAction("com.BeeFramework.NetworkStateService");

@@ -36,7 +36,7 @@ public class EcmobileManager {
 	// 获取百度push的seckey
 	public static String getPushSecKey(Context context)
     {
-        return "xxx";
+        return "PIWZM0Ubrf4pclbAVH5Gy8hizFfRqLIh";
 	}
 	
 	// 获取支付宝parterID(合作者身份)
