@@ -28,6 +28,40 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    
+    <!-- 【必须】 信鸽SDK所需权限 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	
+	<!-- 【必须】 信鸽SDK所需权限 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
 
     <application  android:name="com.insthub.nearbuy.EcmobileApp"
 		          android:icon="@drawable/ecmobile_logo"
@@ -42,6 +76,19 @@
         <meta-data
             	  android:name="AA_DB_VERSION"
             	  android:value="4" />
+        
+	    <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+	    <!-- 信鸽推送 -->
+	    <meta-data 
+	        android:name="XG_V2_ACCESS_ID"
+	        android:value="2100028939" />
+	    <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+	    <!-- 信鸽推送 -->
+	    <meta-data 
+	        android:name="XG_V2_ACCESS_KEY" 
+	        android:value="AT777DL25VZR" />
+	    
+	    
 
         <activity android:name="com.insthub.nearbuy.activity.EcmobileMainActivity"
             	  android:screenOrientation="portrait" 
@@ -71,6 +118,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        
 
         <activity android:name="com.insthub.nearbuy.activity.A0_SigninActivity"
                   android:launchMode="singleTask"
@@ -351,6 +400,7 @@
 		    android:name="com.umeng.update.UpdateDialogActivity"
 		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
 		</activity>
+		
     </application>
 
 </manifest>
