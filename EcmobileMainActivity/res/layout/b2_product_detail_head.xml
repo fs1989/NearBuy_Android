@@ -154,6 +154,33 @@
                         android:src="@drawable/accsessory_arrow_right" />
                 </LinearLayout>
 
+                
+				<LinearLayout
+                        android:id="@+id/goods_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:background="@drawable/white"
+                        android:visibility="visible"  >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/gooddetail_commit"
+                            android:textColor="#333333" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/accsessory_arrow_right" />
+                    </LinearLayout>
+                
+                
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/textview_hight"
@@ -220,31 +247,10 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#e5e5e5" />
+                        android:background="#e5e5e5"
+                        android:visibility="gone" />
 
-                    <LinearLayout
-                        android:id="@+id/goods_comment"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.5"
-                        android:gravity="center"
-                        android:visibility="gone"  >
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_weight="1"
-                            android:text="@string/gooddetail_commit"
-                            android:textColor="#333333" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="20dp"
-                            android:src="@drawable/accsessory_arrow_right" />
-                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </com.insthub.BeeFramework.view.MyScrollView>

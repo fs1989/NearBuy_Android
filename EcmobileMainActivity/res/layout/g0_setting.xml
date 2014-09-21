@@ -125,6 +125,31 @@
                 android:textColor="#0f85ba"
                 android:textSize="17dp"
                 android:visibility="gone" />
+            
+            <LinearLayout
+                    android:id="@+id/profile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="账户绑定"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/accsessory_arrow_right" />
+                </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -250,6 +275,8 @@
                         android:layout_marginRight="10dp"
                         android:src="@drawable/accsessory_arrow_right" />
                 </LinearLayout>
+                
+				
             </LinearLayout>
 
             <TextView

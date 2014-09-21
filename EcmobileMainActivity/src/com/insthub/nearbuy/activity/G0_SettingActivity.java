@@ -13,6 +13,9 @@ package com.insthub.nearbuy.activity;
 //  Powered by BeeFramework
 //
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -25,22 +28,21 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.baidu.android.pushservice.PushConstants;
-import com.baidu.android.pushservice.PushManager;
 import com.external.androidquery.callback.AjaxStatus;
 import com.insthub.BeeFramework.activity.BaseActivity;
+import com.insthub.BeeFramework.activity.MainActivity;
 import com.insthub.BeeFramework.activity.WebViewActivity;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.MyDialog;
-import com.insthub.nearbuy.ECMobileAppConst;
-import com.insthub.nearbuy.EcmobileManager;
 import com.insthub.nearbuy.R;
 import com.insthub.nearbuy.model.ConfigModel;
 import com.insthub.nearbuy.protocol.ApiInterface;
 import com.insthub.nearbuy.protocol.SESSION;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.bean.SocializeConfig;
+import com.umeng.socialize.common.SocializeConstants;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
 
 public class G0_SettingActivity extends BaseActivity implements OnClickListener,BusinessResponse{
 	
@@ -61,6 +63,8 @@ public class G0_SettingActivity extends BaseActivity implements OnClickListener,
     private LinearLayout settingMobileLayout;
     private LinearLayout about;
     private LinearLayout settingSupport;
+    private LinearLayout profile;
+    
 
 	private Button exitLogin;
 	
@@ -76,6 +80,17 @@ public class G0_SettingActivity extends BaseActivity implements OnClickListener,
     {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.g0_setting);
+		
+		profile = (LinearLayout) findViewById(R.id.profile);
+		profile.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.login");
+				mController.openUserCenter(G0_SettingActivity.this,SocializeConstants.FLAG_USER_CENTER_HIDE_LOGININFO);
+			}
+		});
 		
 		shared = getSharedPreferences("userInfo", 0); 
 		editor = shared.edit();

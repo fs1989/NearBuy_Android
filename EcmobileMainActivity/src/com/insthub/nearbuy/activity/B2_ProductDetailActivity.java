@@ -14,29 +14,23 @@ package com.insthub.nearbuy.activity;
 //  Powered by BeeFramework
 //
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.res.Resources;
-import android.os.Handler;
-import android.os.Message;
-import com.insthub.BeeFramework.Utils.TimeUtil;
-import com.umeng.analytics.MobclickAgent;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Dialog;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.Gravity;
@@ -48,12 +42,12 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.external.HorizontalVariableListView.widget.HorizontalVariableListView;
 import com.external.androidquery.callback.AjaxStatus;
 import com.external.maxwin.view.XListView;
 import com.external.maxwin.view.XListView.IXListViewListener;
+import com.insthub.BeeFramework.Utils.TimeUtil;
 import com.insthub.BeeFramework.activity.BaseActivity;
 import com.insthub.BeeFramework.model.BusinessResponse;
 import com.insthub.BeeFramework.view.ToastView;
@@ -63,12 +57,16 @@ import com.insthub.nearbuy.adapter.B3_ProductPhotoAdapter;
 import com.insthub.nearbuy.model.ConfigModel;
 import com.insthub.nearbuy.model.GoodDetailDraft;
 import com.insthub.nearbuy.model.GoodDetailModel;
-import com.insthub.nearbuy.model.ProtocolConst;
 import com.insthub.nearbuy.model.ShoppingCartModel;
 import com.insthub.nearbuy.protocol.ApiInterface;
 import com.insthub.nearbuy.protocol.SPECIFICATION;
 import com.insthub.nearbuy.protocol.SPECIFICATION_VALUE;
 import com.insthub.nearbuy.protocol.STATUS;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.bean.SocializeConfig;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
 
 public class B2_ProductDetailActivity extends BaseActivity implements BusinessResponse, IXListViewListener
 {
@@ -119,7 +117,7 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.b2_product_detail);
-            
+        
         shared = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 		editor = shared.edit();
         
@@ -182,23 +180,6 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
 
 			}
 		});
-        
-		String value1 = MobclickAgent.getConfigParams(this, "Delivery_comment1");
-		String value2 = MobclickAgent.getConfigParams(this, "Delivery_comment2");
-		String value3 = MobclickAgent.getConfigParams(this, "Delivery_comment3");
-        
-        deliveryComment1 = (TextView) findViewById(R.id.dc1);
-        deliveryComment2 = (TextView) findViewById(R.id.dc2);
-        deliveryComment3 = (TextView) findViewById(R.id.dc3);
-        
-        if (value1 == "") {
-        	deliveryComment1.setText("value1 = null");
-		} else {
-	        deliveryComment1.setText(value1);
-	        deliveryComment2.setText(value2);
-	        deliveryComment3.setText(value3);
-		}
-
         
         title = (TextView) findViewById(R.id.top_view_text);
         String det=resource.getString(R.string.gooddetail_product);
@@ -278,15 +259,32 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
 		});
         
         goodsComment = (LinearLayout) headView.findViewById(R.id.goods_comment);
-        goodsComment.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {				
-				Intent intent = new Intent(B2_ProductDetailActivity.this, B5_ProductCommentActivity.class);
-				intent.putExtra("id", Integer.parseInt(dataModel.goodDetail.id));
-				startActivity(intent);
-			}
-		});
+        goodsComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 /**
+                 * 参数说明
+                 * descriptor UMSocialService的标识，你可能在一个Acitvity中使用多个UMSocialService用于区分各个子版块,
+                 *           此时建议使用模块名称;如果只使用一个，建议使用相关Acitvity的class name作为参数。
+                 */
+                 UMSocialService controller = UMServiceFactory.getUMSocialService(dataModel.goodId);
+                /**
+                * 参数说明
+                * arg0  上下文，传入当前Activity的实例即可
+                * arg1  评论时是否需要登录，取值false将以游客的身份进行评论
+                */
+                controller.openComment(B2_ProductDetailActivity.this, true);
+            }
+        });
+//        goodsComment.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {				
+//				Intent intent = new Intent(B2_ProductDetailActivity.this, B5_ProductCommentActivity.class);
+//				intent.putExtra("id", Integer.parseInt(dataModel.goodDetail.id));
+//				startActivity(intent);
+//			}
+//		});
 
         addToCartTextView = (TextView)findViewById(R.id.add_to_cart);
         addToCartTextView.setOnClickListener(new View.OnClickListener() {
