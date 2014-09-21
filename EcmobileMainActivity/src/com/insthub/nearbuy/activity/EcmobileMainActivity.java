@@ -75,7 +75,7 @@ public class EcmobileMainActivity extends FragmentActivity
 	    FeedbackAgent agent = new FeedbackAgent(this);
 	    agent.sync();
 	    
-//	    XGPushManager.registerPush(getApplicationContext());
+	    XGPushManager.registerPush(getApplicationContext());
 //	    XGPushManager.registerPush(getApplicationContext(),
 //				new XGIOperateCallback() {
 //					@Override
