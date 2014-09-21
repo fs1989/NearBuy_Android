@@ -76,6 +76,10 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
     private GoodDetailModel dataModel;
     HorizontalVariableListView goodDetailPhotoList;
 
+    private TextView deliveryComment1;
+    private TextView deliveryComment2;
+    private TextView deliveryComment3;
+    
     private TextView goodBriefTextView;
     private TextView goodPromotePriceTextView;
     private TextView goodMarketPriceTextView;
@@ -108,21 +112,21 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
 	private SharedPreferences.Editor editor;
     private Timer timer;
     private  Boolean isFresh=true;//是否选择的属性
+	private Context mContext;
     private final static int REQUEST_SHOPPINGCAR = 1;
     private final static int REQUEST_SPECIFICATION= 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.b2_product_detail);
-        
+            
         shared = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 		editor = shared.edit();
         
         xlistView = (XListView) findViewById(R.id.good_detail_list);
 
         headView = LayoutInflater.from(this).inflate(R.layout.b2_product_detail_head, null);
-
+        
         xlistView.addHeaderView(headView);
         xlistView.setPullLoadEnable(false);
 		xlistView.setRefreshTime();
@@ -178,6 +182,23 @@ public class B2_ProductDetailActivity extends BaseActivity implements BusinessRe
 
 			}
 		});
+        
+		String value1 = MobclickAgent.getConfigParams(this, "Delivery_comment1");
+		String value2 = MobclickAgent.getConfigParams(this, "Delivery_comment2");
+		String value3 = MobclickAgent.getConfigParams(this, "Delivery_comment3");
+        
+        deliveryComment1 = (TextView) findViewById(R.id.dc1);
+        deliveryComment2 = (TextView) findViewById(R.id.dc2);
+        deliveryComment3 = (TextView) findViewById(R.id.dc3);
+        
+        if (value1 == "") {
+        	deliveryComment1.setText("value1 = null");
+		} else {
+	        deliveryComment1.setText(value1);
+	        deliveryComment2.setText(value2);
+	        deliveryComment3.setText(value3);
+		}
+
         
         title = (TextView) findViewById(R.id.top_view_text);
         String det=resource.getString(R.string.gooddetail_product);

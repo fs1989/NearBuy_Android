@@ -112,7 +112,7 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:padding="5dp"
-                android:visibility="visible" >
+                android:visibility="gone" >
 
                 <TextView
                     android:id="@+id/delivery_comment1"
@@ -257,7 +257,8 @@
                     android:background="@drawable/list_seletor"
                     android:layout_marginTop="-2dip"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
 
                     <TextView
                         android:layout_width="wrap_content"

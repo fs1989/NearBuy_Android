@@ -12,7 +12,8 @@
         <com.insthub.BeeFramework.view.MyScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp" >
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,7 +30,72 @@
                     android:textColor="#333333"
                     android:textSize="19dp" />
 
-                <LinearLayout
+
+
+                <TextView
+                    android:id="@+id/count_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+
+                <com.external.HorizontalVariableListView.widget.HorizontalVariableListView
+                    android:id="@+id/good_detail_photo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_below="@+id/text"
+                    android:gravity="bottom|center_vertical"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp" />
+
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white"
+                    android:padding="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+					
+					<TextView
+	                    android:id="@+id/dc1"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:gravity="center"
+	                    android:text=""
+	                    android:visibility="visible" />
+					<TextView
+	                    android:id="@+id/dc2"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:gravity="center"
+	                    android:text=""
+	                    android:visibility="visible" />
+					<TextView
+	                    android:id="@+id/dc3"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_margin="5dp"
+	                    android:gravity="center"
+	                    android:text=""
+	                    android:visibility="visible" />
+	                    
+                </LinearLayout>
+                
+                
+                <TextView
+                    android:id="@+id/good_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:lineSpacingExtra="5dp"
+                    android:visibility="gone" />
+                
+				<LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -39,7 +105,8 @@
                         android:id="@+id/promote_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#ff0000" />
+                        android:textColor="#ff9000"
+                        android:textSize="22dp" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -62,47 +129,20 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/count_down"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:singleLine="true"
-                    android:textColor="#333333"
-                    android:textSize="11sp" />
-
-                <com.external.HorizontalVariableListView.widget.HorizontalVariableListView
-                    android:id="@+id/good_detail_photo_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="182dp"
-                    android:layout_below="@+id/text"
-                    android:gravity="bottom|center_vertical"
-                    android:paddingBottom="0dp"
-                    android:paddingTop="0dp" />
-
-                <TextView
-                    android:id="@+id/good_property"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:lineSpacingExtra="5dp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/textview_hight"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/body_cont_bg"
+                    android:background="@drawable/white"
                     android:gravity="center" >
 
                     <TextView
                         android:id="@+id/good_category"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_weight="1"
                         android:lineSpacingExtra="5dp"
                         android:textColor="#333333" />
@@ -116,13 +156,11 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/textview_hight"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/body_cont"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/white"
                     android:gravity="center"
                     android:orientation="vertical" >
 
@@ -132,7 +170,8 @@
                         android:layout_height="45dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:gravity="center" >
+                        android:gravity="center"
+                        android:visibility="gone" >
 
                         <TextView
                             android:layout_width="fill_parent"
@@ -152,7 +191,8 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#e5e5e5" />
+                        android:background="#e5e5e5"
+                        android:visibility="gone" />
 
                     <LinearLayout
                         android:id="@+id/goods_desc"
@@ -188,7 +228,8 @@
                         android:layout_height="45dp"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:gravity="center" >
+                        android:gravity="center"
+                        android:visibility="gone"  >
 
                         <TextView
                             android:layout_width="fill_parent"

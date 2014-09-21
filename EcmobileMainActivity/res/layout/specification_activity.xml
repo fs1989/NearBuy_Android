@@ -2,34 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:layout_marginBottom="50dp"
-              android:layout_marginTop="48dp"
-              android:background="@drawable/body_cont"
+              android:layout_marginBottom="20dp"
+              android:layout_marginTop="20dp"
               android:orientation="vertical">
 
     <!-- <include layout="@layout/top_view" /> -->
     <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
         <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:orientation="vertical"
                 >
             <ListView
                     android:id="@+id/specification_list"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="100dp"
                     android:layout_margin="10dp"
                     android:divider="#00000000"
-                    android:dividerHeight="0dp"/>
+                    android:dividerHeight="0dp"
+                    android:visibility="visible"/>
 
             <Button
                     android:id="@+id/shop_car_item_ok"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/address_edit_modify_btnb"
+                    android:background="@drawable/button_green_selector"
                     android:text="@string/dialog_ensure"
                     android:textColor="#ffffff"
                     android:textSize="18dp"/>

@@ -204,7 +204,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:layout_margin="10dp"
-                    android:background="@drawable/address_edit_default_btn_yellow"
+                    android:background="@drawable/button_green_selector"
                     android:text="@string/manage2_set"
                     android:textColor="#ffffff"
                     android:textSize="16dp" />
