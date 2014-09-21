@@ -70,14 +70,12 @@ public class EcmobileMainActivity extends FragmentActivity
     {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
-	    XGPushConfig.enableDebug(this, true);
-	    
 	    
 	    UmengUpdateAgent.silentUpdate(this);
 	    FeedbackAgent agent = new FeedbackAgent(this);
 	    agent.sync();
 	    
-	    XGPushManager.registerPush(getApplicationContext());
+//	    XGPushManager.registerPush(getApplicationContext());
 //	    XGPushManager.registerPush(getApplicationContext(),
 //				new XGIOperateCallback() {
 //					@Override

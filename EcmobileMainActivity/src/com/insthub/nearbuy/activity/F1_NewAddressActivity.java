@@ -133,12 +133,14 @@ public class F1_NewAddressActivity extends BaseActivity implements BusinessRespo
 			        toast.setGravity(Gravity.CENTER, 0, 0);
 			        toast.show();
                     tel.requestFocus();
-				} else if("".equals(mail)) {
-					ToastView toast = new ToastView(F1_NewAddressActivity.this, emailText);
-			        toast.setGravity(Gravity.CENTER, 0, 0);
-			        toast.show();
-                    email.requestFocus();
-				} else if(!ReflectionUtils.isEmail(mail)) {
+				} 
+//				else if("".equals(mail)) {
+//					ToastView toast = new ToastView(F1_NewAddressActivity.this, emailText);
+//			        toast.setGravity(Gravity.CENTER, 0, 0);
+//			        toast.show();
+//                    email.requestFocus();
+//				} 
+				else if(!ReflectionUtils.isEmail(mail)) {
 					ToastView toast = new ToastView(F1_NewAddressActivity.this, cor);
 			        toast.setGravity(Gravity.CENTER, 0, 0);
 			        toast.show();
